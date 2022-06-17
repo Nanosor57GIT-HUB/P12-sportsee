@@ -1,0 +1,232 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/************************************************************************************/
+.containerPage {
+  /* position: relative; */
+  width: 100%;
+  min-width: 1024px;
+   height: 100vh; 
+   /* min-height: 780px;  */
+  
+}
+
+.navH {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  background-color: #000000;
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+}
+
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  width: 25%;
+  height: 91px;
+}
+
+.logo {
+ width: 178px;
+  height: 61px;
+  margin-top: 5px;
+  margin-left: 30px;
+}
+
+.horizontalMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.5rem;
+   color: #ffffff;
+}
+
+.verticalMenu {
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 8%;
+ height: 100%;
+  min-height: 780px; 
+  background-color: #000000;
+}
+
+.containerIcon {
+  display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   height: 40%;
+   margin-top: 50px;
+}
+
+.icoBtn {
+  cursor: pointer;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 5%;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 12px;
+   width: 140px; 
+  height: 10%;
+   transform: rotate(-90deg)  
+}
+
+/**************************************************************/
+.container-user {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 3%;
+  left: 11%;
+  top: 20%;
+  bottom: 0;
+  width: auto;
+   height: auto; 
+   max-height: 100%; 
+   border: 1px solid blue; 
+}
+.hello {
+  font-size: 48px;
+  margin: 0;
+}
+.firstName {
+  color: #ff0000;
+}
+.congratulation {
+  font-size: 18px;
+}
+.bravo {
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+}
+.analyze {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.containerAnanlytics {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+ 
+}
+.daily-activity {
+  width: 100%;/*88%*/
+  height: 50%;
+  background-color: #fbfbfb;
+ 
+}
+.container-activity {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;/*88%*/
+  height: 60%;
+  
+}
+.spider-analytics,
+.objective-score,
+.average-duration {
+width: 258px;
+height: 263px;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+border-radius: 5px;
+}
+.average-duration {
+  background-color: #ff0000;
+  
+}
+.spider-analytics {
+  background-color: #282d30;
+}
+.objective-score {
+  background-color: #fbfbfb;
+}
+.container-energy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  height: 100%;
+}
+.calories,
+.proteines,
+.glucides,
+.lipides {
+  display: flex;
+width: 258px;
+height: 124px;
+background-color: #fbfbfb;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+border-radius: 5px;
+}
+.img-energy {
+  margin-left: 35px;
+}
+.infos-energy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin-left: 20px;
+}
+.number-energy {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+.title-energy {
+  margin: 0;
+  font-size: 14px;
+}
+
+
+.error,
+.loading {
+  display: flex;
+ margin-right: 0;
+  width: 92%;
+  height: 100px;
+  margin-left: 8%;
+  align-items: center;
+ justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: blue;
+}
+.error {
+ color: red;
+}
