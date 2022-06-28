@@ -9,28 +9,28 @@ const SideBar = () => {
     <div className="verticalMenu">
       <div className="containerIcon">
         <img
-          src="img/iconYoga.svg"
+          src={process.env.PUBLIC_URL + "/img/iconYoga.svg"}
           className="icoBtn"
           alt=""
           style={{ width: 64 }}
          
         />
         <img
-          src="img/iconNatation.svg"
+          src={process.env.PUBLIC_URL + "/img/iconNatation.svg"}
 className="icoBtn"
           alt=""
           style={{ width: 64 }}
           
         />
         <img
-          src="img/iconVélo.svg"
+          src={process.env.PUBLIC_URL + "/img/iconVélo.svg"}
 className="icoBtn"
           alt=""
           style={{ width: 64 }}
          
         />
         <img
-          src="img/iconAltère.svg"
+          src={process.env.PUBLIC_URL + "/img/iconAltère.svg"}
           className="icoBtn"
           alt=""
           style={{ width: 64 }}

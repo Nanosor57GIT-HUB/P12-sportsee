@@ -1,27 +1,27 @@
 import React from 'react';
-import Name from './subComponents/Name';
-import Analytics from './subComponents/Analytics';
-import Energy from './subComponents/Energy';
+
+import Name from './stats/subComponents/Name';
+import Energy from './stats/subComponents/Energy';
+import AnalyzesTemplate from './stats/subComponents/analyzes/AnalyzesTemplate'
 
 
-const StatsUser = () => {
 
+const StatsUser = (props) => {
+
+ 
+  console.log(props.data);
 
     return (
+      
       <div className="container-user">
-        <Name />
-
+        
+      <Name data={props.data} />
         <div className="analyze">
-          <Analytics />
-          <Energy  />
+       <AnalyzesTemplate data={props.data} />
+          <Energy data={props.data} />
         </div>
       </div>
     );
 };
 
 export default StatsUser;
-
-//http://localhost:3000/user/${userId}
-//http://localhost:3000/user/${userId}/activity
-//http://localhost:3000/user/${userId}/average-sessions
-//http://localhost:3000/user/${userId}/performance
