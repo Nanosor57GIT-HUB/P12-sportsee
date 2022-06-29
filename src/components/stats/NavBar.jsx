@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <div className="horizontalMenu">
       <nav>
-      <Link to="/" >
+      <Link to="/p12-sportsee" >
         Accueil
       </Link>
       </nav>
