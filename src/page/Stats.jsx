@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/stats/Header";
 import SideBar from "../components/stats/SideBar";
-import UseFetch from "../components/UseFetch";
+import useFetch from "../components/useFetch";
 import StatsUser from "../components/stats/StatsUser";
 import { useParams } from "react-router-dom";
 
@@ -14,7 +14,7 @@ const Stats = () => {
  
 //const userId = 18;/*12 ou 18*/
 //REMONTER LE FETCH DANS HOME !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!(impératif)
- const { data, error, isLoading } = UseFetch(
+ const { data, error, isLoading } = useFetch(
    `http://localhost:3000/user/${userId}/`
  );
 // console.log(data.id);

@@ -5,6 +5,7 @@ import {
   Line,
   XAxis,
   Tooltip,
+  ResponsiveContainer
 } from "recharts";
 
 
@@ -29,14 +30,24 @@ const SessionTime = (props) => {
     return (
       <div className="average-duration">
         <p className="titleSessionTime">Durée moyenne des sessions</p>
-        <LineChart width={250} height={270} data={dataS}>
-          <Line type="monotone" dataKey="uv" stroke="#fff" />
-
-          <XAxis dataKey="name" />
-          <XAxis dataKey="label" />
-          <Tooltip />
-          <Bar dataKey="uv" fill="#0000ff" barSize={20} />
-        </LineChart>
+        <ResponsiveContainer width="95%" height="80%">
+          <LineChart
+            width="{220}"
+            height={200}
+            data={dataS}
+            margin={{
+              
+              right: 5,
+              left: 10,
+             bottom: 15
+            }}
+          >
+            <Line type="monotone" dataKey="uv" stroke="#fff" />
+            <XAxis dataKey="name" style={{ fill: "#fff", opacity: 0.5 }} />
+            <Tooltip cursor={{ stroke: "#fff" }} />
+            <Bar dataKey="uv" barSize={10} />
+          </LineChart>
+        </ResponsiveContainer>
       </div>
     );
 };

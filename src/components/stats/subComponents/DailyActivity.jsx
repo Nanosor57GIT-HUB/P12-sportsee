@@ -16,71 +16,86 @@ const DailyActivity = () => {
 
 const dataB = [
   {
-    name: "Page A",
-    uv: 4000,
-    pv: 2400,
+    name: "Day1",
+    KCal: 328,
+    Kg: 82,
     amt: 2400,
   },
   {
-    name: "Page B",
-    uv: 3000,
-    pv: 1398,
+    name: "Day2",
+    KCal: 360,
+    Kg: 83,
     amt: 2210,
   },
   {
-    name: "Page C",
-    uv: 2000,
-    pv: 9800,
+    name: "Day3",
+    KCal: 285,
+    Kg: 82,
     amt: 2290,
   },
   {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
+    name: "Day4",
+    KCal: 385,
+    Kg: 84,
     amt: 2000,
   },
   {
-    name: "Page E",
-    uv: 1890,
-    pv: 4800,
+    name: "Day5",
+    KCal: 250,
+    Kg: 86,
     amt: 2181,
   },
   {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
+    name: "Day6",
+    KCal: 300,
+    Kg: 83,
     amt: 2500,
   },
   {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
+    name: "Day7",
+    KCal: 350,
+    Kg: 82,
     amt: 2100,
   },
 ];
 
     return (
       <div className="daily-activity">
-        <p className='activityDaily'>Activité quotidiennes</p>
-        <ResponsiveContainer width="100%" height="80%">
+        <p className="titleDailyActivity">Activité quotidiennes</p>
+        <ResponsiveContainer width="100%" height="100%">
           <BarChart
             width={500}
             height={300}
             data={dataB}
             margin={{
-              top: 20,
+              top: 15,
               right: 30,
               left: 20,
               bottom: 5,
             }}
           >
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Bar dataKey="pv" fill="#8884d8" />
-            <Bar dataKey="uv" fill="#82ca9d" />
+            <XAxis dataKey="name" style={{ fill: "#9B9EAC", fontSize: 14 }} />
+            {/* tick={false} */}
+            <YAxis
+              orientation={"right"}
+              style={{ fill: "#9B9EAC", fontSize: 14 }}
+            />
+            <Tooltip orientation={"left"} />
+         
+            <Legend verticalAlign="top" height={60} align="right" />
+            <Bar
+              dataKey="Kg"
+              fill="#282D30"
+              radius={[5, 5, 0, 0]}
+              barSize={10}
+            />
+            <Bar
+              dataKey="KCal"
+              fill="#E60000"
+              radius={[5, 5, 0, 0]}
+              barSize={10}
+            />
           </BarChart>
         </ResponsiveContainer>
       </div>

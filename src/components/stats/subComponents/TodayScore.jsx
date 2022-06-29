@@ -1,5 +1,5 @@
 import React from 'react';
-import { PieChart, Pie, ResponsiveContainer } from "recharts";
+import { RadialBarChart, RadialBar, ResponsiveContainer } from "recharts";
 
 const TodayScore = (props) => {
 
@@ -14,28 +14,46 @@ const TodayScore = (props) => {
       console.log(data4);
      
 
-const data01 = [{ name: "A1", value: data3 }];
+ const data01 = [
+   {
+     name: "A1",
+     uv: data3 * 100,
+     pv: 2400,
+     fill: "red",
+   },
+   {
+     name: "100",
+     uv: 100,
+     pv: 4567,
+     fill: "#FBFBFB",
+   },
+ ];
+
 
     return (
       <div className="objective-score">
         <p className="titleScore">Score</p>
         <p className="tauxObjectif">
-          <span style={{fontWeight: 700}} >12%</span> de votre objectif
+          <span style={{ fontWeight: 700 }}>{data3 * 100}%</span> de votre
+          objectif
         </p>
         <ResponsiveContainer width="100%" height="100%">
-          <PieChart width={400} height={400}>
-            <Pie
-              dataKey="value"
-              startAngle={90}
-              endAngle={0}
-              data={data01}
-              cx="50%"
-              cy="50%"
-              innerRadius={80}
-              outerRadius={100}
-              fill="red"
+          <RadialBarChart
+            width={730}
+            height={250}
+            innerRadius={80}
+            outerRadius={100}
+            data={data01}
+            startAngle={90}
+            endAngle={-270}
+          >
+            <RadialBar
+              style={{ background: "#fbfbfb" }}
+              dataKey="uv"
+              cornerRadius={50}
             />
-          </PieChart>
+          
+          </RadialBarChart>
         </ResponsiveContainer>
 
         {/* {data3} */}

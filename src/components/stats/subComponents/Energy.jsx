@@ -12,7 +12,7 @@ const Energy = (props) => {
   //  console.log(data3);
    // const id = data.id;
  //   console.log(id);
-    const data5 = data.keyData;
+    const energy = data.keyData;
   //  console.log(data5); 
   
   return (
@@ -24,7 +24,7 @@ const Energy = (props) => {
           alt="calories"
         ></img>
         <div className="infos-energy">
-          <p className="number-energy">{data5.calorieCount}Cal</p>
+          <p className="number-energy">{energy.calorieCount}Cal</p>
 
           <p className="title-energy">Calories</p>
         </div>
@@ -37,7 +37,7 @@ const Energy = (props) => {
           alt="proteines"
         ></img>
         <div className="infos-energy">
-          <p className="number-energy">{data5.proteinCount}g</p>
+          <p className="number-energy">{energy.proteinCount}g</p>
           <p className="title-energy">Proteines</p>
         </div>
       </div>
@@ -49,7 +49,7 @@ const Energy = (props) => {
           alt="glucides"
         ></img>
         <div className="infos-energy">
-          <p className="number-energy">{data5.carbohydrateCount}g</p>
+          <p className="number-energy">{energy.carbohydrateCount}g</p>
           <p className="title-energy">Glucides</p>
         </div>
       </div>
@@ -61,7 +61,7 @@ const Energy = (props) => {
           alt="lipides"
         ></img>
         <div className="infos-energy">
-          <p className="number-energy">{data5.lipidCount}g</p>
+          <p className="number-energy">{energy.lipidCount}g</p>
           <p className="title-energy">Lipides</p>
         </div>
       </div>
