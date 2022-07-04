@@ -10,11 +10,19 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const DailyActivity = () => {
 
+const DailyActivity = (activity) => {
 
+const activityData = activity.data.data
+//console.log(activityData);
 
-const dataB = [
+const activitySessions = activityData.sessions
+//console.log(activitySessions);
+
+const idActivity = activityData.userId
+//console.log(idActivity);
+
+const dataD = [
   {
     name: "Day1",
     KCal: 328,
@@ -58,39 +66,65 @@ const dataB = [
     amt: 2100,
   },
 ];
+/************************************************************ */
 
+
+
+
+
+function CustomTooltip({ payload, active }) {
+  if (active) {
+    return (
+      <div className="custom-tooltip">
+        <p className="labelDailyActivity">{` ${payload[1].value} KCal`}</p>
+        <p className="desc">{` ${payload[0].value} Kg`}</p>
+     
+      </div>
+    );
+  }
+
+  return null;
+}
+/**************************************************************** */
     return (
       <div className="daily-activity">
         <p className="titleDailyActivity">Activité quotidiennes</p>
+       
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             width={500}
             height={300}
-            data={dataB}
+            data={dataD}
             margin={{
               top: 15,
-              right: 30,
-              left: 20,
+              right: 0,
+              left: 25,
               bottom: 5,
             }}
           >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" style={{ fill: "#9B9EAC", fontSize: 14 }} />
-            {/* tick={false} */}
             <YAxis
               orientation={"right"}
               style={{ fill: "#9B9EAC", fontSize: 14 }}
             />
-            <Tooltip orientation={"left"} />
-         
-            <Legend verticalAlign="top" height={60} align="right" />
+            <Tooltip content={<CustomTooltip />} />
+            <Legend
+              verticalAlign="top"
+              height={50}
+              align="right"
+              iconType="circle"
+              iconSize={10}
+            />
             <Bar
+              name="Calories brûlées (KCal)"
               dataKey="Kg"
               fill="#282D30"
               radius={[5, 5, 0, 0]}
               barSize={10}
             />
             <Bar
+              name="Poids (Kg)"
               dataKey="KCal"
               fill="#E60000"
               radius={[5, 5, 0, 0]}
@@ -100,6 +134,9 @@ const dataB = [
         </ResponsiveContainer>
       </div>
     );
+   
 };
 
 export default DailyActivity;
+
+//https://stackoverflow.com/questions/44413185/custom-legend-labels-in-my-rechart-chart

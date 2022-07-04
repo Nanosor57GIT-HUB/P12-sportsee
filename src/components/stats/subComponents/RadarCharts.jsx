@@ -7,7 +7,17 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const RadarCharts = () => {
+
+const RadarCharts = (performance) => {
+ 
+  const radarData = performance.data.data
+  //console.log(radarData);
+
+  const radarKind = radarData.kind
+ // console.log(radarKind);
+
+  const radarValue = radarData.data
+ // console.log(radarValue);
 
 
 const dataR = [

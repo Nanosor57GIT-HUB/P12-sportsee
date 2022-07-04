@@ -16,7 +16,6 @@ function App() {
           <Route path="/statistiques/:userId" element={<Stats />} />
         </Routes>
       </BrowserRouter>
-      {/* <Stats />  */}
     </div>
   );
 }

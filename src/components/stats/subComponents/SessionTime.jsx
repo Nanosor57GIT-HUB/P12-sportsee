@@ -1,55 +1,97 @@
 import React from 'react';
 import {
-  Bar,
   LineChart,
   Line,
   XAxis,
+  YAxis,
   Tooltip,
   ResponsiveContainer
 } from "recharts";
 
 
-const SessionTime = (props) => {
+const SessionTime = (session) => {
 
+ const dataSession = session.data.data
+// console.log(dataSession);
 
+ const sessionTime = dataSession.sessions
+// console.log(sessionTime);
 
-
+ const idSession = dataSession.userId
+// console.log(idSession);
 
 
     const dataS = [
-      { name: "L", uv: 550, pv: 2400, amt: 2400 },
-      { name: "M", uv: 400, pv: 2400, amt: 2400 },
-      { name: "M", uv: 300, pv: 2400, amt: 2400 },
-      { name: "J", uv: 350, pv: 2400, amt: 2400 },
-      { name: "V", uv: 100, pv: 2400, amt: 2400 },
-      { name: "S", uv: 200, pv: 2400, amt: 2400 },
-      { name: "D", uv: 200, pv: 2400, amt: 2400 }
+      { name: "L", Min: 90, pv: 2400, amt: 2400 },
+      { name: "M", Min: 65, pv: 2400, amt: 2400 },
+      { name: "M", Min: 180, pv: 2400, amt: 2400 },
+      { name: "J", Min: 45, pv: 2400, amt: 2400 },
+      { name: "V", Min: 30, pv: 2400, amt: 2400 },
+      { name: "S", Min: 80, pv: 2400, amt: 2400 },
+      { name: "D", Min: 20, pv: 2400, amt: 2400 }
     ];
+
+function CustomTooltip({ payload, active }) {
+  if (active) {
+    return (
+      <div className="custom-tooltip">
+        <p className="labelSession">
+          {payload[0].value}
+          <span> min</span>
+        </p>
+      </div>
+    );
+  }
+  return null;
+}
+
 
 
     return (
       <div className="average-duration">
         <p className="titleSessionTime">Durée moyenne des sessions</p>
-        <ResponsiveContainer width="95%" height="80%">
+        <ResponsiveContainer width="100%" height="100%">
           <LineChart
-            width="{220}"
-            height={200}
             data={dataS}
-            margin={{
-              
-              right: 5,
-              left: 10,
-             bottom: 15
-            }}
+            margin={{ top: 0, right: 12, bottom: 24, left: 12 }}
           >
-            <Line type="monotone" dataKey="uv" stroke="#fff" />
-            <XAxis dataKey="name" style={{ fill: "#fff", opacity: 0.5 }} />
-            <Tooltip cursor={{ stroke: "#fff" }} />
-            <Bar dataKey="uv" barSize={10} />
+            <XAxis
+              dataKey="name"
+              stroke="rgba(255, 255, 255, 0.6)"
+              axisLine={false}
+              dy={10}
+              tickLine={false}
+              tick={{
+                fontSize: 12,
+                fontWeight: 500,
+              }}
+            />
+            <YAxis dataKey="Min" domain={[0, "dataMax + 90"]} hide={true} />
+            <Line
+              dataKey="Min"
+              type={"monotone"}
+              stroke="rgba(255, 255, 255, 0.6)"
+              strokeWidth={2}
+              dot={false}
+              activeDot={{
+                stroke: "rgba(255,255,255, 0.6)",
+                strokeWidth: 10,
+                r: 5,
+              }}
+            />
+            <Tooltip
+              content={<CustomTooltip />}
+              cursor={{
+                stroke: "rgba(0, 0, 0, 0.1)",
+                strokeWidth: 32,
+              }}
+            />
           </LineChart>
         </ResponsiveContainer>
       </div>
     );
 };
 
+     
+  
 export default SessionTime;
