@@ -1,9 +1,9 @@
 import React from "react";
 
 
-const Name = (props) => {
+const Name = (user) => {
  
-  const datas = props.data;
+  const datas = user.data;
   //console.log(datas);
   const data = datas.data;
  // console.log(data);

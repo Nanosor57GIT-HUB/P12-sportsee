@@ -66,7 +66,11 @@ function CustomTooltip({ payload, active }) {
                 fontWeight: 500,
               }}
             />
-            <YAxis dataKey="Min" domain={[0, "dataMax + 90"]} hide={true} />
+            <YAxis
+              dataKey="Min"
+              domain={[0, "dataMax + 90"]}
+              hide={true}
+            />
             <Line
               dataKey="Min"
               type={"monotone"}

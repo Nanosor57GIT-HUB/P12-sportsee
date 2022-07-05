@@ -1,9 +1,9 @@
 import React from 'react';
 import { RadialBarChart, RadialBar, ResponsiveContainer } from "recharts";
 
-const TodayScore = (props) => {
-
-  const dataScore = props.data;
+const TodayScore = (user) => {
+console.log(user);
+  const dataScore = user.data;
   
   const data = dataScore.data;
   

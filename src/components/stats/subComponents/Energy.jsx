@@ -1,13 +1,13 @@
 import React from "react";
 
-const Energy = (props) => {
+const Energy = (user) => {
 
-    const datas = props.data;
-//console.log(datas);
-    const data = datas.data;
+     const datas = user.data;
+// //console.log(datas);
+     const data = datas.data;
  
-    const energy = data.keyData;
-  //  console.log(energy); 
+     const energy = data.keyData;
+//   //  console.log(energy); 
   
   return (
     <div className="container-energy">

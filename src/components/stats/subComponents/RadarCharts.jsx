@@ -11,13 +11,13 @@ import {
 const RadarCharts = (performance) => {
  
   const radarData = performance.data.data
-  //console.log(radarData);
+  console.log(radarData);
 
   const radarKind = radarData.kind
- // console.log(radarKind);
+  console.log(radarKind);
 
   const radarValue = radarData.data
- // console.log(radarValue);
+  console.log(radarValue);
 
 
 const dataR = [

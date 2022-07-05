@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import UseFetch from './UseFetch';
+import useFetch from './service/useFetch';
 
 const UseService = () => {
   // const {userId} = 12
@@ -8,29 +8,29 @@ const UseService = () => {
 
   const {
     data: user,
-    error,
-    isLoading,
-  } = UseFetch(`http://localhost:3000/user/${userId}`);
+    // error,
+    // isLoading,
+  } = useFetch(`http://localhost:3000/user/${userId}`);
   console.log(user);
   // console.log(user.data.keyData);
   
 //  const test = user.data.keyData
 //  console.log(test);
 
-  const { data: performance } = UseFetch(
+  const { data: performance } = useFetch(
     `http://localhost:3000/user/${userId}/performance`
   );
   console.log(performance);
  // console.log(performance.data.kind);
 
 
-  const { data: activity } = UseFetch(
+  const { data: activity } = useFetch(
     `http://localhost:3000/user/${userId}/activity`
   );
   console.log(activity);
- // console.log(activity.data.sessions[1]);
+ //console.log(activity.data.sessions[1]);
 
-  const { data: session } = UseFetch(
+  const { data: session } = useFetch(
     `http://localhost:3000/user/${userId}/average-sessions`
   );
   console.log(session);
@@ -38,10 +38,15 @@ const UseService = () => {
 
   return (
     <div>
-     
+      {/* {isLoading && <div className="loading">Chargement en cours ...</div>}
+      {error && (
+        <div className="error">
+          Désolé, une erreur est survenue pendant le chargement ...
+        </div>
+      )} */}
     </div>
   );
-};
+};;
 
 export default UseService;
 
