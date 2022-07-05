@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/P12-sportsee/static/css/main.6d49e492.css",
-    "main.js": "/P12-sportsee/static/js/main.aebd518f.js",
+    "main.css": "/P12-sportsee/static/css/main.d4a6682c.css",
+    "main.js": "/P12-sportsee/static/js/main.e8c34018.js",
     "index.html": "/P12-sportsee/index.html",
-    "main.6d49e492.css.map": "/P12-sportsee/static/css/main.6d49e492.css.map",
-    "main.aebd518f.js.map": "/P12-sportsee/static/js/main.aebd518f.js.map"
+    "main.d4a6682c.css.map": "/P12-sportsee/static/css/main.d4a6682c.css.map",
+    "main.e8c34018.js.map": "/P12-sportsee/static/js/main.e8c34018.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d49e492.css",
-    "static/js/main.aebd518f.js"
+    "static/css/main.d4a6682c.css",
+    "static/js/main.e8c34018.js"
   ]
 }
