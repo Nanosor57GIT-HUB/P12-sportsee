@@ -5,80 +5,93 @@ import {
   PolarGrid,
   PolarAngleAxis,
   ResponsiveContainer,
+  Text,
 } from "recharts";
 
 
 const RadarCharts = (performance) => {
- 
-  const radarData = performance.data.data
-  console.log(radarData);
+  const radarData = performance.data.data;
+   console.log(radarData);
 
-  const radarKind = radarData.kind
-  console.log(radarKind);
-
-  const radarValue = radarData.data
-  console.log(radarValue);
+  // const radarValue = radarData.data;
+  //  console.log(radarValue);
 
 
-const dataR = [
-  {
-    subject: "Intensité",
-    A: 120,
-    B: 110,
-    fullMark: 150,
-  },
-  {
-    subject: "Vitesse",
-    A: 98,
-    B: 130,
-    fullMark: 150,
-  },
-  {
-    subject: "Force",
-    A: 86,
-    B: 130,
-    fullMark: 150,
-  },
-  {
-    subject: "Endurance",
-    A: 99,
-    B: 100,
-    fullMark: 150,
-  },
-  {
-    subject: "Energie",
-    A: 85,
-    B: 90,
-    fullMark: 150,
-  },
-  {
-    subject: "Cardio",
-    A: 65,
-    B: 85,
-    fullMark: 150,
-  },
-];
+  // const value = radarValue.map((value) => value.value);
+  // console.log(value);
+  
+
+//   let radarKind = radarData.kind;
+// console.log(radarKind);
+
+// radarKind = Array.of("cardio", 'energy', 'endurance', 'vitesse', 'intensité')
+// console.log(radarKind);
+// const kinds = radarKind.map((kind) => kind);
+// console.log(kinds);
+
+// const test = performance.data.data.kind
+// console.log(test);
 
 
+  const DataRadarTitle = radarData.data.map((data) => {
+    switch (data.kind) {
+      case 1:
+        return { ...data, kind: "Cardio" };
+      case 2:
+        return { ...data, kind: "Energie" };
+      case 3:
+        return { ...data, kind: "Endurance" };
+      case 4:
+        return { ...data, kind: "Force" };
+      case 5:
+        return { ...data, kind: "Vitesse" };
+      case 6:
+        return { ...data, kind: "Intensité" };
+      default:
+        return { ...data };
+    }
+  });
+console.log(DataRadarTitle);
 
-    return (
-      <div className="spider-analytics">
-        <ResponsiveContainer width="100%" height="100%">
-          <RadarChart cx="50%" cy="50%" outerRadius="60%" data={dataR}>
-            <PolarGrid />
-            <PolarAngleAxis dataKey="subject" stroke='white' />
-            
-            <Radar
-              name="Mike"
-              dataKey="A"
-              // stroke="#8884d8"
-              fill="red"
-              fillOpacity={0.6}
-            />
-          </RadarChart>
-        </ResponsiveContainer>
-      </div>
-    );
-};
+ const value = DataRadarTitle.map((value) => value.value);
+ console.log(value);
+
+const kind = DataRadarTitle.map((kind) => kind.kind);
+  console.log(kind);
+
+
+  return (
+    <div className="spider-analytics">
+      <ResponsiveContainer width="100%" height="100%">
+        <RadarChart cx="50%" cy="50%" outerRadius="60%" data={DataRadarTitle}>
+          <PolarGrid />
+          <PolarAngleAxis
+            dataKey="kind"
+            stroke="white"
+            tick={(props) => renderPolarAngleAxis(props)}
+          />
+          <Radar
+            dataKey="value"
+            fill="red"
+            fillOpacity={0.6}
+          />
+        </RadarChart>
+      </ResponsiveContainer>
+    </div>
+  );
+};;
+
+function renderPolarAngleAxis({ payload, x, y, cx, cy }) {
+  return (
+    <Text
+      verticalAnchor="middle"
+      y={y + (y - cy +10) / 8}
+      x={x + (x - (cx + 70)) / 3}
+      style={{ fill: "rgba(255, 255, 255)", fontSize: 12 }}
+    >
+      {payload.value}
+    </Text>
+  );
+}
 //https://github.com/logic-fabric/sportsee/tree/main/src/components
 export default RadarCharts;

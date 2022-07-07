@@ -12,24 +12,63 @@ import {
 const SessionTime = (session) => {
 
  const dataSession = session.data.data
-// console.log(dataSession);
-
  const sessionTime = dataSession.sessions
-// console.log(sessionTime);
+ //console.log(sessionTime);
 
- const idSession = dataSession.userId
-// console.log(idSession);
+ //const day = sessionTime.map((day) => day.day)
+ //console.log(day);
+ 
+const sessionLength = sessionTime.map((time) => time.sessionLength);
+//console.log(sessionLength);
+
+ const day = sessionTime.map((data) => {
+   switch (data.day) {
+     case 1:
+       return { ...data, day: "L" };
+     case 2:
+       return { ...data, day: "M" };
+     case 3:
+       return { ...data, day: "M" };
+     case 4:
+       return { ...data, day: "J" };
+     case 5:
+       return { ...data, day: "V" };
+     case 6:
+       return { ...data, day: "S" };
+     case 7:
+       return { ...data, day: "D" };
+     default:
+       return { ...data };
+   }
+ });
+  console.log(day);
 
 
-    const dataS = [
-      { name: "L", Min: 90, pv: 2400, amt: 2400 },
-      { name: "M", Min: 65, pv: 2400, amt: 2400 },
-      { name: "M", Min: 180, pv: 2400, amt: 2400 },
-      { name: "J", Min: 45, pv: 2400, amt: 2400 },
-      { name: "V", Min: 30, pv: 2400, amt: 2400 },
-      { name: "S", Min: 80, pv: 2400, amt: 2400 },
-      { name: "D", Min: 20, pv: 2400, amt: 2400 }
-    ];
+
+//  const DataRadarTitle = radarData.data.map((data) => {
+//    switch (data.kind) {
+//      case 1:
+//        return { ...data, kind: "Cardio" };
+//      case 2:
+//        return { ...data, kind: "Energie" };
+//      case 3:
+//        return { ...data, kind: "Endurance" };
+//      case 4:
+//        return { ...data, kind: "Force" };
+//      case 5:
+//        return { ...data, kind: "Vitesse" };
+//      case 6:
+//        return { ...data, kind: "Intensité" };
+//      default:
+//        return { ...data };
+//    }
+//  });
+
+
+
+
+
+
 
 function CustomTooltip({ payload, active }) {
   if (active) {
@@ -52,11 +91,11 @@ function CustomTooltip({ payload, active }) {
         <p className="titleSessionTime">Durée moyenne des sessions</p>
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
-            data={dataS}
-            margin={{ top: 0, right: 12, bottom: 24, left: 12 }}
+            data={sessionTime}
+            margin={{ top: 0, right: 16, bottom: 24, left: 16 }}
           >
             <XAxis
-              dataKey="name"
+              dataKey="day"
               stroke="rgba(255, 255, 255, 0.6)"
               axisLine={false}
               dy={10}
@@ -67,12 +106,12 @@ function CustomTooltip({ payload, active }) {
               }}
             />
             <YAxis
-              dataKey="Min"
-              domain={[0, "dataMax + 90"]}
+              dataKey="sessionLength"
+              domain={[ -10, "dataMax + 40" ]}
               hide={true}
             />
             <Line
-              dataKey="Min"
+              dataKey="sessionLength"
               type={"monotone"}
               stroke="rgba(255, 255, 255, 0.6)"
               strokeWidth={2}
@@ -88,6 +127,7 @@ function CustomTooltip({ payload, active }) {
               cursor={{
                 stroke: "rgba(0, 0, 0, 0.1)",
                 strokeWidth: 32,
+                
               }}
             />
           </LineChart>
@@ -95,7 +135,8 @@ function CustomTooltip({ payload, active }) {
       </div>
     );
 };
-
+//https://stackoverflow.com/questions/68018173/customize-datakey-values
+//https://www.paigeniedringhaus.com/blog/build-and-custom-style-recharts-data-charts
      
   
 export default SessionTime;

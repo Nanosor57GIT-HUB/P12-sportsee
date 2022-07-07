@@ -2,7 +2,7 @@ import React from 'react';
 import { RadialBarChart, RadialBar, ResponsiveContainer } from "recharts";
 
 const TodayScore = (user) => {
-console.log(user);
+//console.log(user);
   const dataScore = user.data;
   
   const data = dataScore.data;
@@ -44,7 +44,7 @@ console.log(user);
           endAngle={-270}
         >
           <RadialBar
-            style={{ background: "#fbfbfb" }}
+            // style={{ background: "#fbfbfb" }}
             dataKey="uv"
             cornerRadius={50}
           />

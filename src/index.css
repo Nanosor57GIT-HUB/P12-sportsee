@@ -379,7 +379,7 @@ justify-content: flex-end;
 .custom-tooltip {
   display: flex;
   flex-direction: column;
-  width: 70px;
+  width: 90px;
   height: 80px;
   color: #fff;
 }
@@ -407,3 +407,16 @@ border-radius: 5px 5px 0 0;
   text-align: center;
   border-radius: 5px;
 }
+
+
+.recharts-wrapper .recharts-cartesian-grid-horizontal line:first-child {
+  stroke-Dasharray: 0
+}
+
+
+.recharts-wrapper .recharts-cartesian-grid-vertical line {
+      stroke-opacity: 0;
+}
+
+
+

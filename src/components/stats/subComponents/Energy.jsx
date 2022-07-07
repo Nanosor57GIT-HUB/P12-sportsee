@@ -7,7 +7,7 @@ const Energy = (user) => {
      const data = datas.data;
  
      const energy = data.keyData;
-//   //  console.log(energy); 
+     console.log(energy); 
   
   return (
     <div className="container-energy">
@@ -18,7 +18,9 @@ const Energy = (user) => {
           alt="calories"
         ></img>
         <div className="infos-energy">
-          <p className="number-energy">{energy.calorieCount}Cal</p>
+          <p className="number-energy">
+            {energy.calorieCount / 1000}Cal
+          </p>
 
           <p className="title-energy">Calories</p>
         </div>
