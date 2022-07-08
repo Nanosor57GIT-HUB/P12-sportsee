@@ -11,27 +11,7 @@ import {
 
 const RadarCharts = (performance) => {
   const radarData = performance.data.data;
-   console.log(radarData);
-
-  // const radarValue = radarData.data;
-  //  console.log(radarValue);
-
-
-  // const value = radarValue.map((value) => value.value);
-  // console.log(value);
-  
-
-//   let radarKind = radarData.kind;
-// console.log(radarKind);
-
-// radarKind = Array.of("cardio", 'energy', 'endurance', 'vitesse', 'intensité')
-// console.log(radarKind);
-// const kinds = radarKind.map((kind) => kind);
-// console.log(kinds);
-
-// const test = performance.data.data.kind
-// console.log(test);
-
+  // console.log(radarData);
 
   const DataRadarTitle = radarData.data.map((data) => {
     switch (data.kind) {
@@ -51,13 +31,13 @@ const RadarCharts = (performance) => {
         return { ...data };
     }
   });
-console.log(DataRadarTitle);
+//console.log(DataRadarTitle);
 
- const value = DataRadarTitle.map((value) => value.value);
- console.log(value);
+// const value = DataRadarTitle.map((value) => value.value);
+ //console.log(value);
 
-const kind = DataRadarTitle.map((kind) => kind.kind);
-  console.log(kind);
+//const kind = DataRadarTitle.map((kind) => kind.kind);
+ // console.log(kind);
 
 
   return (
@@ -93,5 +73,7 @@ function renderPolarAngleAxis({ payload, x, y, cx, cy }) {
     </Text>
   );
 }
+
+
 //https://github.com/logic-fabric/sportsee/tree/main/src/components
 export default RadarCharts;

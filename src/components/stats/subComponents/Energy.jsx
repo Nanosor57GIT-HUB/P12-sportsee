@@ -1,14 +1,13 @@
 import React from "react";
 
 const Energy = (user) => {
+  const datas = user.data;
+  // //console.log(datas);
+  const data = datas.data;
 
-     const datas = user.data;
-// //console.log(datas);
-     const data = datas.data;
- 
-     const energy = data.keyData;
-     console.log(energy); 
-  
+  let energy = data.keyData
+
+  //toLocaleString('en-US')
   return (
     <div className="container-energy">
       <div className="calories">
@@ -19,7 +18,7 @@ const Energy = (user) => {
         ></img>
         <div className="infos-energy">
           <p className="number-energy">
-            {energy.calorieCount / 1000}Cal
+            {energy.calorieCount.toLocaleString("en-US")}Cal 
           </p>
 
           <p className="title-energy">Calories</p>

@@ -306,7 +306,7 @@ border-radius: 5px;
 /**** PAGE ACCUEIL POUR DEMO ****/
 .homePage {
   height: 100vh;
-  background-color: rgb(205, 190, 190);
+  background-color: #fbfbfb;
 }
 .homeNav {
   position: absolute;
@@ -401,6 +401,7 @@ border-radius: 5px 5px 0 0;
 }
 .labelSession {
   background-color: #fff;
+  width: 80%;
   color: #000000;
   height: 40px;
   line-height: 40px;
