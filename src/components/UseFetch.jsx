@@ -30,7 +30,7 @@ const useFetch = (url) => {
           setError(err.message);
           setIsLoading(false);
         });
-    },500);
+    },800);
     // console.log("useEffect vient d'être appelé");
     // console.log(blogs);
     // [] n'utilise qu'une fois cette fonction

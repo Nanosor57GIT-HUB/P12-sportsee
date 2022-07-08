@@ -1,20 +1,20 @@
 import React from 'react';
 import { RadialBarChart, RadialBar, ResponsiveContainer } from "recharts";
 
-const TodayScore = (user) => {
-//console.log(user);
-  const dataScore = user.data;
+const TodayScore = (props) => {
+
+  const dataScore = props.data;
   
   const data = dataScore.data;
   
 
-    const scoreData = data.todayScore * 100  || data.score * 100  ;
+    let scoreData = data.todayScore || data.score;
    // console.log(scoreData);
 
   const data01 = [
     {
       name: "A1",
-      uv: scoreData ,
+      uv: scoreData * 100,
       pv: 2400,
       fill: "red",
     },
@@ -30,7 +30,7 @@ const TodayScore = (user) => {
     <div className="objective-score">
       <p className="titleScore">Score</p>
       <p className="tauxObjectif">
-        <span style={{ fontWeight: 700 }}>{scoreData}%</span> de votre
+        <span style={{ fontWeight: 700 }}>{scoreData * 100}%</span> de votre
         objectif
       </p>
       <ResponsiveContainer width="100%" height="100%">
@@ -44,6 +44,7 @@ const TodayScore = (user) => {
           endAngle={-270}
         >
           <RadialBar
+            style={{ background: "#fbfbfb" }}
             dataKey="uv"
             cornerRadius={50}
           />
