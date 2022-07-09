@@ -207,9 +207,9 @@ border-radius: 5px;
 }
 .average-duration-bgc {
   position: absolute;
-  display: flex;
-  justify-content: flex-end;
-  width: 20%;
+ top: 0;
+ right: 0; 
+  width: 27%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.1);
 }

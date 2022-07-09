@@ -49,7 +49,7 @@ const SessionTime = (session) => {
 
   return (
     <div className="average-duration">
-     {/* <div className='average-duration-bgc'> */}
+     <div className='average-duration-bgc'></div>
       <p className="titleSessionTime">Durée moyenne des sessions</p>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
@@ -90,7 +90,7 @@ const SessionTime = (session) => {
             content={<CustomTooltip />}
              cursor={{
             //   stroke: "rgba(0, 0, 0, 0.1)",
-               strokeWidth: 0,
+               strokeWidth: 0, //32
              }}
           />
         </LineChart>

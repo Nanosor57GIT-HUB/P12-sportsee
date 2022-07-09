@@ -1,13 +1,12 @@
 import React from "react";
+
+
+
 const SideBar = () => {
-
-
-
 
   return (
     <div className="verticalMenu">
       <div className="containerIcon">
-        
         <img
           src={process.env.PUBLIC_URL + "/img/iconYoga.svg"}
           className="icoBtn"
