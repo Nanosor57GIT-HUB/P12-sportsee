@@ -1,9 +1,9 @@
 import React from "react";
 
 
-const Name = (props) => {
-  //console.log(props);
-  const datas = props.data;
+const Name = (user) => {
+ 
+  const datas = user.data;
   //console.log(datas);
   const data = datas.data;
  // console.log(data);
@@ -20,7 +20,7 @@ const Name = (props) => {
       </h1>
 
       <p className="congratulation">
-        "Félicitation! Vous avez explosé votre score"
+        "Félicitation! Vous avez explosé vos objectifs"
         <img src={process.env.PUBLIC_URL + "/img/frappeMains.png"} className="bravo" alt="Bravo-icon"></img>
       </p>
     </div>

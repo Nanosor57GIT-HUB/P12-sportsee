@@ -5,9 +5,6 @@ import Stats from "./page/Stats";
 
 function App() {
 
-
-     
-
   return (
     <div>
       <BrowserRouter>
@@ -16,11 +13,8 @@ function App() {
           <Route path="/statistiques/:userId" element={<Stats />} />
         </Routes>
       </BrowserRouter>
-      {/* <Stats />  */}
     </div>
   );
 }
 
 export default App;
-
-//https://stackblitz.com/edit/react-api-service?file=Api.service.js

@@ -9,9 +9,9 @@ const NavBar = () => {
         Accueil
       </Link>
       </nav>
-      <a href="#Profil">Profil</a>
-      <a href="#Réglage">Réglage</a>
-      <a href="#Communauté">Communauté</a>
+      <Link to="#Profil">Profil</Link>
+      <Link to="#Réglage">Réglage</Link>
+      <Link to="#Communauté">Communauté</Link>
     </div>
   );
 };
