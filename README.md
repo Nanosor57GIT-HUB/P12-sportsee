@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Projet 12 SportSee/Openclassrooms
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+Project directed by Thierry Friedrich
 
-In the project directory, you can run:
+according to a model set up on the figma site : [UI-design-Sportify-FR]
+(https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+SportSee, project to create a "dashboard" page for monitoring energy expenditure. The user can follow the information concerning his efforts in sports expenditure on the week and day / day.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Design based for a Desktop version of minimum 1024px x 780px. There is no Tablet/Mobile version yet.
 
-### `npm test`
+Prerequisite: nodeJS (version 16.15.1)
+yarn
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Language: JavaScript
 
-### `npm run build`
+Framework: ReactJS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Dependencies: React (version 17.0.2)  
+ React-DOM (version 17.0.2)  
+ React-router-DOM (version 6.3.0)  
+ Charts (version 2.1.11)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Deployment on github:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+devDependencies: gh-pages
+homepage: https://nanosor57git-hub.github.io/P12-sportsee/
 
-### `npm run eject`
+IDE: Visual Studio Code
+Doc: JSDoc integrated with VSC
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## How to install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the [P9-front-end-dashboard](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard) project to your computer. This is the repository that contains the API needed to use the project.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Open this folder with your IDE (Visual Studio Code type). Launch the terminal and pass the yarn command which will allow you to install the dependencies. Then use yarn dev to run the API on port: http://localhost:3000 of your browser.
 
-## Learn More
+- Do not close the terminal and go to the next step.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Clone the [SportSee](https://nanosor57git-hub.github.io/P12-sportsee/) Project to your computer.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Open it on your IDE (Visual Code Studio type). Launch a new terminal and do an npm install. Once installed, do npm start to allow the execution and the opening of the project on your browser.
+   During the opening of the project, you will be asked to confirm the opening on another port. Answer yes (y), the opening will continue to run on the port: http://localhost:3001 of your browser.
 
-### Code Splitting
+5. At the opening of the project, a Home page was created specifically for the demonstration. It will allow you to navigate between the two available users.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+### Preview project on github:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## The rendering of the SportSee project can directly be viewed on github. To do this, simply follow steps 1 and 2 and come back by clicking on this link: [SportSee Project](https://nanosor57git-hub.github.io/P12-sportsee/)
 
-### Making a Progressive Web App
+### Possible endPoints on API port (3000)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project includes four endpoints that you will be able to use:
 
-### Advanced Configuration
+http://localhost:3000/user/${userId} - retrieves information from a user. This first endpoint includes the user id, user information (first name, last name and age), the current day's score (todayScore) and key data (calorie, macronutrient, etc.).
+http://localhost:3000/user/${userId}/activity - retrieves a user's activity day by day with kilograms and calories.
+http://localhost:3000/user/${userId}/average-sessions - retrieves the average sessions of a user per day. The week starts on Monday.
+http://localhost:3000/user/${userId}/performance - retrieves a user's performance (energy, endurance, etc.).
+Warning, currently only two users have been mocked. They have userId 12 and 18 respectively.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Examples of queries
+http://localhost:3000/user/12/performance - Retrieves the performance of the user with id 12
+http://localhost:3000/user/18 - Retrieves user 18's main information.

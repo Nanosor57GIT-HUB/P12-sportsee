@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
+/**
+ * Création du jsx de la page d'accueil
+ * @returns Retourne la page d'accueil et les userId pour la démonstartion
+ */
 const Home = () => {
-
   return (
     <div className="homePage">
       <div className="homeNav">
@@ -15,10 +17,10 @@ const Home = () => {
 
         <div className="userLink">
           <nav className="navId">
-            <Link to="/statistiques/12" className="a">
+            <Link to="/statistiques/12" className="user12Btn userBtn">
               User-12
             </Link>
-            <Link to="/statistiques/18" className="a">
+            <Link to="/statistiques/18" className="user18Btn userBtn">
               User-18
             </Link>
           </nav>
@@ -28,8 +30,11 @@ const Home = () => {
         <div className="titleDemo">
           <h1 className="titleHome">DEMO SportSee</h1>
           <p className="subTitleDemo">
-            Page crée pour la démonstartion entre les Ids<br/> 
-            <span style={{color: "#000000"}}>(Page created for the demonstration between the Ids)</span>           
+            Page crée pour la démonstartion entre les Ids
+            <br />
+            <span style={{ color: "#000000" }}>
+              (Page created for the demonstration between the Ids)
+            </span>
           </p>
         </div>
         <div className="logoIsolé">
