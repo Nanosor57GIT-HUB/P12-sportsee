@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
-//Création et utilisation d'un hook customisé sur un fetch
+//Creating and using a custom hook on a fetch
 /**
- * @description Création d'un service d'appel d'API par une URL
+ * @description Creating an API call service by a URL
  * @param {fetch} url 
- * @returns Retourne un fetch avec la gestion d'erreur par un useState et un useEffect
+ * @returns Returns a fetch with error handling by a useState and a useEffect
  */
 const useFetch = (url) => {
   const [data, setData] = useState(null);

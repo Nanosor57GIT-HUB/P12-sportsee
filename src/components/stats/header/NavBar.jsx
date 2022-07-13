@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 /**
  * @description Creation of horizontal navigation(links)
  * @returns Flip horizontal navbar
- * {JSX.Element}
+ * (JSX.Element)
  */
 const NavBar = () => {
   return (

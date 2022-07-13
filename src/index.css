@@ -110,6 +110,7 @@ padding: 3px;
  .icoBtn:hover {
   border-radius: 10px; 
 border: 2px solid red;
+/* box-shadow: 0px 0px 2px 1px red; */
  /* transition: border 0.6s ease-in-out; */
 } 
 

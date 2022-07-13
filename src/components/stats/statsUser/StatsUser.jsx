@@ -9,13 +9,13 @@ import useFetch from "../../../service/useFetchService";
 import { useParams } from "react-router-dom";
 
 /**
- * @description Mise en place du service d'appel de l'api
- * @const {object} userId Renvoie un objet des paramètres dynamiques de l'URL
- * @const {array} user Rtourne le tableau utilisateur
- * @const {array} session retourne le tableau average session
- * @const {array} performance retourne le tableau performance
- * @const {array} activity retourne le tableau activity
- * @returns L'appel de chaque adresse de l'api
+ * @description Setting up the API call service
+ * @const {object} userId Returns a dynamic parameters object from the URL
+ * @const {array} user Returns the user array
+ * @const {array} session returns the average session array
+ * @const {array} performance returns the performance array
+ * @const {array} activity returns the activity array
+ * @returns Returns the call from each api address
  */
 const AnalyticsCharts = () => {
   const { userId } = useParams();
