@@ -2,16 +2,14 @@ import React from "react";
 import { RadialBarChart, RadialBar, ResponsiveContainer } from "recharts";
 
 /**
- *
+ * @description 
  * @param {*} user
  * @returns
  */
 const TodayScore = (user) => {
   const dataScore = user.data;
   const data = dataScore.data;
-
   const scoreData = data.todayScore * 100 || data.score * 100;
-
   const data01 = [
     {
       name: "A1",

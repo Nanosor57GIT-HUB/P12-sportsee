@@ -3,8 +3,8 @@ import Home from "./page/Home";
 import Stats from "./page/Stats";
 
 /**
- * Création d'un router
- * @returns Retourne les informations nécéssaires à la redirection des pages
+ * @description Creation of a router
+ * @returns Returns the paths of each page
  */
 function App() {
   return (

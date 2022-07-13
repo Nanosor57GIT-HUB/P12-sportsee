@@ -1,14 +1,15 @@
 import React from "react";
 
 /**
- * Récupération des datas energétiques pour les transcrire dans le composant Energy
+ * @description Recovery of energy data to transcribe them into the Energy component
  * @param {number} user
- * @returns Retourne les valeurs energétiques
+ * @const {object} datas (id, userInfos, todayScore, keyData)
+ * @const {object} energy (calorieCount, proteinCount, carbohydrateCount, lipidCount)
+ * @returns Returns energy values
  */
 const Energy = (user) => {
-  const datas = user.data;
-  const data = datas.data;
-  const energy = data.keyData;
+  const datas = user.data.data;
+  const energy = datas.keyData;
 
   return (
     <div className="container-energy">

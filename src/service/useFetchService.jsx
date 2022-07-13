@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 //Création et utilisation d'un hook customisé sur un fetch
 /**
- * Création d'un service d'appel d'API par une URL
+ * @description Création d'un service d'appel d'API par une URL
  * @param {fetch} url 
  * @returns Retourne un fetch avec la gestion d'erreur par un useState et un useEffect
  */

@@ -4,7 +4,7 @@ import SideBar from "../components/stats/sideBar/SideBar";
 import StatsUser from "../components/stats/statsUser/StatsUser";
 
 /**
- * Création du container avec les composants utiles à la page du dashboard statistiques
+ * @description Création du container avec les composants utiles à la page du dashboard statistiques
  * @returns Retourne la page des statistique de chaque user demandé
  */
 const Stats = () => {

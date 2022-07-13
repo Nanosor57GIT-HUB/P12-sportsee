@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 /**
- * Création du jsx de la page d'accueil
+ * @description Création du jsx de la page d'accueil
  * @returns Retourne la page d'accueil et les userId pour la démonstartion
  */
 const Home = () => {
@@ -50,3 +50,9 @@ const Home = () => {
 };
 
 export default Home;
+
+/*
+Thierry Friedrich oui il faut que tu renseignes ton script de build sur le site de Netlify, pareil pour tes variables d'environnement si tu en utilise. Sinon tu fais ton build en local, tu commentes le dossier build dans ton git ignore et tu push.
+
+et dans ton dossier public tu fais un fichier _redirects dans lequel tu mets cette ligne: /* /index.html 200 (c'est pour gérer un pbm de 404 lié à Netlify quand tu reload la page)
+*/

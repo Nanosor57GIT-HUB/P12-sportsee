@@ -3,8 +3,8 @@ import Logo from "./Logo";
 import NavBar from "./NavBar";
 
 /**
- * Intégration des composants Logo et NavBar dans le header
- * @returns Retourne les composants Logo/NavBar
+ * @description Calling Logo and NavBar components
+ * @returns Returns Logo/NavBar components
  */
 const Header = () => {
   return (

@@ -1,19 +1,17 @@
 import React from "react";
 
 /**
- * Récpération des datas utilisateur pour les transcrire dans le composant Name
- * @param {number} user
- * @returns Retourne l'identifiant utilisateur
+ * @description Retrieval of user data to transcribe them into the Name component
+ * @param {string} user
+ * @const {object} data (id, userInfos, todayScore, keyData)
+ * @const {object} userInfos (firstName, lastName, age)
+ * @const {string} name (user Name)
+ * @returns Returns user name 
  */
 const Name = (user) => {
-  const datas = user.data;
-  //console.log(datas);
-  const data = datas.data;
-  // console.log(data);
-  const datax = data.userInfos;
-  // console.log(datax);
-  const name = datax.firstName;
-  // console.log(name);
+  const data = user.data.data;
+  const userInfos = data.userInfos;
+  const name = userInfos.firstName;
 
   return (
     <div className="name-congratulations">

@@ -9,7 +9,7 @@ import useFetch from "../../../service/useFetchService";
 import { useParams } from "react-router-dom";
 
 /** ( faire /** puis entrer )
- * explic function
+ * @description explic function
  * @param {exple: array} props // explic props
  * @returns exple: le composant
  */

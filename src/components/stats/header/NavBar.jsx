@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 /**
- * Création des liens de navigation horizontale
- * @returns Retourne la barre de navigation horizontale
+ * @description Creation of horizontal navigation(links)
+ * @returns Flip horizontal navbar
+ * {JSX.Element}
  */
 const NavBar = () => {
   return (

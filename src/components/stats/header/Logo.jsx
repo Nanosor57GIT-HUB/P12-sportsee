@@ -1,8 +1,8 @@
 import React from "react";
 
 /**
- * Création du container pour le logo
- * @returns Mise en place du logo dans le header statistiques
+ * @description Creation of the container for the logo
+ * @returns (JSX.Element) logo
  */
 const Logo = () => {
   return (

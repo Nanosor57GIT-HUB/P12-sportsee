@@ -1,37 +1,41 @@
+![logo](https://user-images.githubusercontent.com/84918375/178348430-c7b1a04e-cf07-431f-992d-3540e822f9ec.svg)
+
 # Projet 12 SportSee/Openclassrooms
 
 ---
 
-Project directed by Thierry Friedrich
+### Project directed by Thierry Friedrich
 
-according to a model set up on the figma site : [UI-design-Sportify-FR]
-(https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1)
+#### Design based for a Desktop version of minimum 1024px x 780px. There is no Tablet/Mobile version yet.
 
----
+#### according to a model set up on the figma site : [UI-design-Sportify-FR](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1)
 
-SportSee, project to create a "dashboard" page for monitoring energy expenditure. The user can follow the information concerning his efforts in sports expenditure on the week and day / day.
+## SportSee, project to create a "dashboard" page for monitoring energy expenditure. The user can follow the information concerning his efforts in sports expenditure on the week and day / day.
 
-## Design based for a Desktop version of minimum 1024px x 780px. There is no Tablet/Mobile version yet.
+##### Prerequisite:
 
-Prerequisite: nodeJS (version 16.15.1)
-yarn
+- nodeJS (version 16.15.1)
+- yarn
 
-Language: JavaScript
+##### Langage: JavaScript
 
-Framework: ReactJS
+##### Framework: ReactJS
 
-Dependencies: React (version 17.0.2)  
- React-DOM (version 17.0.2)  
- React-router-DOM (version 6.3.0)  
- Charts (version 2.1.11)
+##### Dependencies:
+
+- React (version 17.0.2)
+- React-DOM (version 17.0.2)
+- React-router-DOM (version 6.3.0)
+- Recharts (version 2.1.11)
 
 ### Deployment on github:
 
 devDependencies: gh-pages
 homepage: https://nanosor57git-hub.github.io/P12-sportsee/
 
-IDE: Visual Studio Code
-Doc: JSDoc integrated with VSC
+##### IDE: Visual Studio Code
+
+##### Doc: JSDoc integrated with VSC
 
 ---
 
@@ -52,9 +56,11 @@ Doc: JSDoc integrated with VSC
 
 ---
 
-### Preview project on github:
+## Preview project on github:
 
-## The rendering of the SportSee project can directly be viewed on github. To do this, simply follow steps 1 and 2 and come back by clicking on this link: [SportSee Project](https://nanosor57git-hub.github.io/P12-sportsee/)
+#### The rendering of the SportSee project can directly be viewed on github. To do this, simply follow steps 1 and 2 and come back by clicking on this link: [SportSee Project](https://nanosor57git-hub.github.io/P12-sportsee/)
+
+---
 
 ### Possible endPoints on API port (3000)
 

@@ -11,16 +11,18 @@ import {
 } from "recharts";
 
 /**
- * Création d'un graphisme d'activité quotidienne avec recharts
- * @param {data} activity
- * @returns Retourne un graphisme d'activité quotidienne avec les données d'une API
+ * @description Creating a daily activity chart with recharts
+ * @param {array | number} activity
+ * @const {array | number} activityData
+ * @const {array | number} activitySessions
+ * @returns Returns a daily activity graph with data from an API
  */
 const DailyActivity = (activity) => {
   const activityData = activity.data.data;
   const activitySessions = activityData.sessions;
 
   /**
-   * Conversion des datas "Dates" en jour sur une semaine
+   * @description Conversion of "Dates" data into days over a week
    */
   const dayActivity = activitySessions.map((data) => {
     switch (new Date(data.day).getDate()) {
@@ -44,34 +46,33 @@ const DailyActivity = (activity) => {
   });
 
   /**
-   * conversion des unités d'energie
-   * @param {number} C
-   * @returns Retourne les valeurs converties(calories => KCal) dans les barres de résultat
+   * @description conversion of energy units
+   * @param {number} C calories data
+   * @returns Returns converted values (calories => KCal) in result bars
    */
   let Kcal = (C) => {
     return C.calories / 1000;
   };
 
   /**
-   * Conversion des unités de poids
-   * @param {number} W
-   * @returns Retourne les valeurs converties dans les barres de résultat
+   * @description Conversion of weight units
+   * @param {number} W weights data
+   * @returns Returns converted values in result bars adapt size
    */
   let Kg = (W) => {
     return W.kilogram / 1000;
   };
 
   /**
-   * Création d'une info-bulle personnalisée
-   * @param {info-bulle} param0
-   * @returns Retourne les valeurs converties et les dénominations dans l'info-bulle
+   * @description Creating a custom tooltip
+   * @param {number | string} param0
+   * @returns Returns converted values and denominations in tooltip
    */
   function CustomTooltip({ payload, active }) {
     if (active) {
       return (
         <div className="custom-tooltip">
           <p className="labelDailyActivity">{`${payload[1].value} KCal`}</p>
-
           <p className="desc">{` ${payload[0].value * 1000} Kg`}</p>
         </div>
       );
@@ -80,9 +81,9 @@ const DailyActivity = (activity) => {
   }
 
   /**
-   * Création d'une function pour adapter la couleur de remplacement
-   * @param {number} value
-   * @returns Retourne la couleur voulue sur les textes dans la légende
+   * @description Creation of a function to adapt the replacement color
+   * @param {color} value
+   * @returns Returns the desired color on the texts in the legend
    */
   const renderColorfulLegendText = (value) => {
     return <span style={{ color: "#74798C" }}>{value}</span>;
