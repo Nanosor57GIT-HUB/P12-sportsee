@@ -4,8 +4,8 @@ import SideBar from "../components/stats/sideBar/SideBar";
 import StatsUser from "../components/stats/statsUser/StatsUser";
 
 /**
- * @description Création du container avec les composants utiles à la page du dashboard statistiques
- * @returns Retourne la page des statistique de chaque user demandé
+ * @description Creation of the container with the useful components on the statistics dashboard page
+ * @returns Returns the statistics page of each requested user
  */
 const Stats = () => {
   return (
@@ -18,10 +18,3 @@ const Stats = () => {
 };
 
 export default Stats;
-
-//http://localhost:3000/user/${userId}
-//http://localhost:3000/user/${userId}/activity
-//http://localhost:3000/user/${userId}/average-sessions
-//http://localhost:3000/user/${userId}/performance
-
-//https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard

@@ -60,7 +60,7 @@ const DailyActivity = (activity) => {
    * @returns Returns converted values in result bars adapt size
    */
   let Kg = (W) => {
-    return W.kilogram / 1000;
+    return W.kilogram / 500;
   };
 
   /**
@@ -73,7 +73,7 @@ const DailyActivity = (activity) => {
       return (
         <div className="custom-tooltip">
           <p className="labelDailyActivity">{`${payload[1].value} KCal`}</p>
-          <p className="desc">{` ${payload[0].value * 1000} Kg`}</p>
+          <p className="desc">{` ${payload[0].value * 500} Kg`}</p>
         </div>
       );
     }

@@ -6,11 +6,13 @@
 
 ### Project directed by Thierry Friedrich
 
+#### SportSee, project to create a "dashboard" page for monitoring energy expenditure. The user can follow the information concerning his efforts in sports expenditure on the week and day / day.
+
 #### Design based for a Desktop version of minimum 1024px x 780px. There is no Tablet/Mobile version yet.
 
 #### according to a model set up on the figma site : [UI-design-Sportify-FR](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1)
 
-## SportSee, project to create a "dashboard" page for monitoring energy expenditure. The user can follow the information concerning his efforts in sports expenditure on the week and day / day.
+---
 
 ##### Prerequisite:
 
@@ -30,8 +32,13 @@
 
 ### Deployment on github:
 
-devDependencies: gh-pages
-homepage: https://nanosor57git-hub.github.io/P12-sportsee/
+devDependencies:
+
+- gh-pages
+
+homepage:
+
+- https://nanosor57git-hub.github.io/P12-sportsee/
 
 ##### IDE: Visual Studio Code
 

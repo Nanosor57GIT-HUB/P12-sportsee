@@ -2,15 +2,17 @@ import React from "react";
 import { RadialBarChart, RadialBar, ResponsiveContainer } from "recharts";
 
 /**
- * @description 
- * @param {*} user
- * @returns
+ * @description User score retrieval
+ * @param {number} user
+ * @const {object} dataScore (userInfos, score, keyData)
+ * @const {number} scoreData (user score)
+ * @const {array} dataTodayScore (name, uv, pv, fill)
+ * @returns returns the user's score converted to %
  */
 const TodayScore = (user) => {
-  const dataScore = user.data;
-  const data = dataScore.data;
-  const scoreData = data.todayScore * 100 || data.score * 100;
-  const data01 = [
+  const dataScore = user.data.data; 
+  const scoreData = dataScore.todayScore * 100 || dataScore.score * 100;
+  const dataTodayScore = [
     {
       name: "A1",
       uv: scoreData,
@@ -40,7 +42,7 @@ const TodayScore = (user) => {
           height={250}
           innerRadius={80}
           outerRadius={100}
-          data={data01}
+          data={dataTodayScore}
           startAngle={90}
           endAngle={-270}
         >

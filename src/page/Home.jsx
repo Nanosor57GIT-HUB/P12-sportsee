@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 /**
- * @description Création du jsx de la page d'accueil
- * @returns Retourne la page d'accueil et les userId pour la démonstartion
+ * @description Creation of the jsx of the home page
+ * @returns Returns the home page and userIds for the demo
  */
 const Home = () => {
   return (

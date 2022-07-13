@@ -9,17 +9,19 @@ import {
 } from "recharts";
 
 /**
- * @description
- * @param {*} session 
- * @returns 
+ * @description reate the time by session chart
+ * @param {object} session 
+ * * @const {object} dataSession (sessions, userId )
+ * * @const {array} sesssionTime (day, sessionLength)
+ * @returns Return the data of session
  */
 const SessionTime = (session) => {
   const dataSession = session.data.data;
   const sessionTime = dataSession.sessions;
 
- /**
-  * 
-  */
+  /**
+   * @description Conversion of number data into days over a week
+   */
   let days = sessionTime.map((data) => {
     switch (data.day) {
       case 1:
@@ -42,9 +44,9 @@ const SessionTime = (session) => {
   });
 
   /**
-   *
+   * @description Customization of the tooltip and insertion of a "min" denomination
    * @param {*} param0
-   * @returns Retourne la customisation de l
+   * @returns Returns tooltip customization
    */
   function CustomTooltip({ payload, active }) {
     if (active) {
