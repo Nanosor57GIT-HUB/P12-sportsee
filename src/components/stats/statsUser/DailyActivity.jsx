@@ -99,7 +99,7 @@ const DailyActivity = (activity) => {
           height={300}
           data={dayActivity}
           margin={{
-            top: 15,
+            top: 22,
             right: 0,
             left: 25,
             bottom: 5,
@@ -117,7 +117,7 @@ const DailyActivity = (activity) => {
           <Tooltip content={<CustomTooltip />} />
           <Legend
             verticalAlign="top"
-            height={90}
+            height={70}
             align="right"
             iconType="circle"
             iconSize={10}

@@ -8,7 +8,7 @@ import NavBar from "./NavBar";
  */
 const Header = () => {
   return (
-    <div className="navH">
+    <div className="navHContainer">
       <Logo />
       <NavBar />
     </div>

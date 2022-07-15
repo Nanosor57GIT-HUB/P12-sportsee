@@ -35,6 +35,7 @@ const AnalyticsCharts = () => {
   );
 
   return (
+    <div className="wrapperUser">
     <div className="userContainer">
       <div className="nameContainer">{user && <Name data={user} />}</div>
 
@@ -53,6 +54,7 @@ const AnalyticsCharts = () => {
 
         <div className="energyContainer">{user && <Energy data={user} />}</div>
       </div>
+    </div>
     </div>
   );
 };

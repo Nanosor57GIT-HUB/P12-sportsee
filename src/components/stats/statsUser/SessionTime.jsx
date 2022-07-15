@@ -84,7 +84,7 @@ const SessionTime = (session) => {
           />
           <YAxis
             dataKey="sessionLength"
-            domain={[-10, "dataMax + 40"]}
+            domain={[10, "dataMax + 70"]}
             hide={true}
           />
           <Line
