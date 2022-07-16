@@ -18,6 +18,7 @@ import {
  */
 const RadarCharts = (performance) => {
   const radarData = performance.data.data;
+  
 
   /**
    * @description Conversion of number data kind of array into number kind of object(object value string)

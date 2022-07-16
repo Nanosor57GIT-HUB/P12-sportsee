@@ -9,9 +9,10 @@ import React from "react";
  * @returns Returns user name 
  */
 const Name = (user) => {
-  const data = user.data.data;
-  const userInfos = data.userInfos;
-  const name = userInfos.firstName;
+   const data = user.data.data;
+   const userInfos = data.userInfos;
+   const name = userInfos.firstName;
+  
 
   return (
     <div className="name-congratulations">
@@ -20,7 +21,7 @@ const Name = (user) => {
       </h1>
 
       <p className="congratulation">
-        "Félicitation! Vous avez explosé vos objectifs"
+        "Félicitation! Hier, vous avez explosé vos objectifs"
         <img
           src={process.env.PUBLIC_URL + "/img/frappeMains.png"}
           className="bravo"

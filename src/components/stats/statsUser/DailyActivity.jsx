@@ -18,8 +18,9 @@ import {
  * @returns Returns a daily activity graph with data from an API
  */
 const DailyActivity = (activity) => {
-  const activityData = activity.data.data;
-  const activitySessions = activityData.sessions;
+   const activityData = activity.data.data;
+   const activitySessions = activityData.sessions;
+
 
   /**
    * @description Conversion of "Dates" data into days over a week
@@ -110,16 +111,15 @@ const DailyActivity = (activity) => {
           <CartesianGrid vertical={false} strokeDasharray="1 1" />
           <XAxis dataKey="day" style={{ fill: "#9B9EAC", fontSize: 14 }} />
           <YAxis
+            yAxisId="kilogram"
             orientation={"right"}
             dataKey={Kg}
             domain={["dataMin -2", "dataMax +1"]}
             dx={15}
-            // domain={["dataMin -1", "dataMax +2"]}
-            // ticks={[0, 50, 100]}
             style={{ fill: "#9B9EAC", fontSize: 14 }}
             tickCount="3"
           />
-         {/* <YAxis dataKey={Kcal} hide={true} /> */}
+          <YAxis yAxisId="calories" dataKey={Kcal} hide={true} />
           <Tooltip content={<CustomTooltip />} />
           <Legend
             verticalAlign="top"
@@ -130,6 +130,7 @@ const DailyActivity = (activity) => {
             formatter={renderColorfulLegendText}
           />
           <Bar
+            yAxisId="kilogram"
             name="Poids (Kg)"
             dataKey={Kg}
             fill="#282D30"
@@ -137,6 +138,7 @@ const DailyActivity = (activity) => {
             barSize={10}
           />
           <Bar
+            yAxisId="calories"
             name="Calories brûlées (KCal)"
             dataKey={Kcal}
             fill="#E60000"

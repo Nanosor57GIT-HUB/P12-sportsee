@@ -10,6 +10,7 @@ import React from "react";
 const Energy = (user) => {
   const datas = user.data.data;
   const energy = datas.keyData;
+ 
 
   return (
     <div className="container-energy">
