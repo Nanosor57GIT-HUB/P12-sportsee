@@ -51,7 +51,7 @@ const DailyActivity = (activity) => {
    * @returns Returns converted values (calories => KCal) in result bars
    */
   let Kcal = (C) => {
-    return C.calories / 1000;
+    return C.calories;
   };
 
   /**
@@ -60,7 +60,7 @@ const DailyActivity = (activity) => {
    * @returns Returns converted values in result bars adapt size
    */
   let Kg = (W) => {
-    return W.kilogram / 500;
+    return W.kilogram ;
   };
 
   /**
@@ -72,8 +72,8 @@ const DailyActivity = (activity) => {
     if (active) {
       return (
         <div className="custom-tooltip">
-          <p className="labelDailyActivity">{`${payload[1].value} KCal`}</p>
-          <p className="desc">{` ${payload[0].value * 500} Kg`}</p>
+          <p className="labelDailyActivity">{`${payload[0].value} Kg`}</p>
+          <p className="desc">{` ${payload[1].value /1000 } KCal`}</p>
         </div>
       );
     }
@@ -104,16 +104,22 @@ const DailyActivity = (activity) => {
             left: 25,
             bottom: 5,
           }}
+          barGap={8}
+          barCategoryGap={1}
         >
-          <CartesianGrid strokeDasharray="3 3" />
+          <CartesianGrid vertical={false} strokeDasharray="1 1" />
           <XAxis dataKey="day" style={{ fill: "#9B9EAC", fontSize: 14 }} />
           <YAxis
             orientation={"right"}
-            dataKey={Kcal}
-            //ticks={[0, 0.3, 0.6]}
+            dataKey={Kg}
+            domain={["dataMin -2", "dataMax +1"]}
+            dx={15}
+            // domain={["dataMin -1", "dataMax +2"]}
+            // ticks={[0, 50, 100]}
             style={{ fill: "#9B9EAC", fontSize: 14 }}
             tickCount="3"
           />
+         {/* <YAxis dataKey={Kcal} hide={true} /> */}
           <Tooltip content={<CustomTooltip />} />
           <Legend
             verticalAlign="top"

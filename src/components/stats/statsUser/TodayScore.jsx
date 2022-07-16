@@ -44,7 +44,7 @@ const TodayScore = (user) => {
           outerRadius={100}
           data={dataTodayScore}
           startAngle={90}
-          endAngle={-270}
+          endAngle={360}
         >
           <RadialBar dataKey="uv" cornerRadius={50} />
         </RadialBarChart>

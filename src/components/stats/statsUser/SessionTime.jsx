@@ -103,8 +103,7 @@ const SessionTime = (session) => {
           <Tooltip
             content={<CustomTooltip />}
             cursor={{
-              //   stroke: "rgba(0, 0, 0, 0.1)",
-              strokeWidth: 0, //32
+              strokeWidth: 0 
             }}
           />
         </LineChart>
